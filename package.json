@@ -1,0 +1,33 @@
+{
+  "name": "vpn-controler",
+  "version": "1.0.0",
+  "description": "vpn-controler",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "npx electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^24.8.8",
+    "electron-builder": "^24.0.0"
+  },
+  "build": {
+    "appId": "com.vpncontroller",
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "perMachine": false,
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "runAfterFinish": true
+    }
+  },
+  "author": {
+    "name": "Uelber Pereira de Jesus",
+    "email": "uelberbell@gmail.com"
+  }
+}
